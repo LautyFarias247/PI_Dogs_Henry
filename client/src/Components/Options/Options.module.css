@@ -1,0 +1,11 @@
+.options {
+    display: flex;
+    padding: 15px 15px;
+}
+
+.options select {
+    background-color: papayawhip
+}
+
+
+

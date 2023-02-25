@@ -1,0 +1,52 @@
+.container {
+    color: #843b2d;
+    background-color: rgba(255, 239, 213, 0.603);
+    border: 4px solid 	#ba835e;
+    border-radius: 30px;
+    padding: 0 10px;
+    width: 50%;
+}
+
+.container button {
+    border: 2px solid #ba835e;
+    background-color: papayawhip;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    color: #843b2d;
+}
+select, input {
+    background-color: papayawhip;
+    border: 2px solid 	#ba835e;
+}
+
+div a {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    color: #843b2d;
+    margin-bottom: 5px;
+}
+
+.temp_list{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+hr {
+    border:1px solid #ba835e;
+    margin: 15px 0;
+}
+
+.temp_list li {
+    margin: 0 5px;
+    background-color: papayawhip;
+    border: 2px solid #ba835e;
+    padding: 0 3px;
+}
