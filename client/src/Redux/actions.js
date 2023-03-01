@@ -20,10 +20,6 @@ const getAllDogs = (setLoading) => {
 
 const getDogsByName = (payload) => {
     return async function (dispatch) {
-        // if(payload === ""){
-        //     return getAllDogs
-        // }
-
         const dogsByName = await axios.get(`http://localhost:3001/dogs?name=${payload}`);
         return dispatch({type: GET_DOGS_BY_NAME, payload: dogsByName.data})
     }
@@ -41,6 +37,12 @@ const postDog = (payload) => {
     return async function () {
         const newDog = await axios.post("http://localhost:3001/dogs", payload)
         return newDog
+    //     try {
+    //         const response = await axios.post("http://localhost:3001/dogs)", payload)
+    //         return response
+    //     } catch (error) {
+    //          console.log(error.message); 
+    //     }
     }
 }
 

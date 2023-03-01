@@ -45,8 +45,17 @@ hr {
 }
 
 .temp_list li {
-    margin: 0 5px;
+    /* margin: 0 5px; */
     background-color: papayawhip;
     border: 2px solid #ba835e;
     padding: 0 3px;
+}
+
+.deleteTemp {
+    margin: 0 5px;
+    margin-left: -2px;
+    background-color: papayawhip;
+    border: 2px solid #ba835e;
+    padding: 0 3px;
+    cursor: pointer;
 }

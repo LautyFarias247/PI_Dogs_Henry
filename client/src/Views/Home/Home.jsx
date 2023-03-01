@@ -30,7 +30,12 @@ const Home = () => {
             {loading && <Loading/>}
             {!loading && <Navbar setCurrentPage={setCurrentPage} setOrder={setOrder}/>}
             {!loading &&<CardsContainer slicedDogs={currentDogs}/>}
-            {!loading && <Pagination totalDogs={allDogs.length} dogsPerPage={dogsPerPage} setCurrentPage={setCurrentPage}/>}
+            {!loading && <Pagination 
+                totalDogs={allDogs.length} 
+                dogsPerPage={dogsPerPage} 
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}    
+            />}
         </>
     )
 }

@@ -9,6 +9,8 @@ const validate = ({name, minHeight, maxHeight, minWeight, maxWeight, lifespan}) 
     const errors = {};
     if(!name) errors.name = "Name is required"
     if(!/^[a-zA-Z ]*$/.test(name)) errors.name = "Name can't contain numbers or special characters";
+    if(minHeight < 1) errors.height = "Height must to be greater than 1"
+    if(minWeight < 1) errors.weight = "Weight must to be greater than 1"
     if(!minHeight || !maxHeight) errors.height = "Height is required"
     if(!minWeight || !maxWeight) errors.weight = "Weight is required"
     if(Number(minHeight) > Number(maxHeight)) errors.height = "Minumun height can't be greater than maximum";
@@ -16,8 +18,8 @@ const validate = ({name, minHeight, maxHeight, minWeight, maxWeight, lifespan}) 
     if(!lifespan) errors.lifespan = "Lifespan is required";
     if(lifespan > 99) errors.lifespan = "Lifespan can't be greater than 99";
     if(lifespan < 1) errors.lifespan = "Lifespan must to be greater than 1"
-
-    return errors}
+    return errors
+}
 
 const Form = () => {
     const dispatch = useDispatch()
@@ -69,7 +71,13 @@ const Form = () => {
             })
         }
     }
-    
+    const handleDeleteTemperaments = (temp) => {
+        setForm({
+            ...form,
+            temperaments: form.temperaments.filter(item => item !== temp)
+        })
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         for(const field in form) {
@@ -98,6 +106,7 @@ const Form = () => {
             alert("Please, select at least one temperament");
             return
         }
+        
         dispatch(postDog(dog))
         alert("Dog successfully created!");
         setForm({
@@ -158,7 +167,10 @@ const Form = () => {
                 <ul className={style.temp_list}>
                     {form.temperaments.map((temp, i) =>{
                         return (
-                            <li key={i}>{temp}</li>
+                            <>
+                                <li key={i}>{temp} </li>
+                                <a className={style.deleteTemp} onClick={()=>handleDeleteTemperaments(temp)}>x</a>
+                            </>
                             )
                         })}
                 </ul>

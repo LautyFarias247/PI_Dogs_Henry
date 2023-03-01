@@ -15,8 +15,29 @@
     margin: 0 5px;
     background-color: #ffefd5;
     border: 4px solid #ba835e;
+    font-size: 15px;
 }
 
 .buttonContainer button:hover {
     cursor: pointer
+}
+
+.buttonContainer button.active {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    background-color: #ba835e;
+    border: 4px solid 	#843b2d
+}
+.buttonContainer a{
+    font-size: 15px;
+    background-color: #ffefd5;
+    border: 4px solid #843b2d;
+    border-radius: 30px;
+    text-align: center;
+    padding: 4px;
+}
+
+.buttonContainer a:hover{
+    cursor: pointer;
 }

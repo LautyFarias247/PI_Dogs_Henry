@@ -12,7 +12,6 @@ import { GET_ALL_DOGS,
 const initialState = {
     dogs: [],
     detail: {},
-    copyDogs: [],
     temperaments: []
 }
 
