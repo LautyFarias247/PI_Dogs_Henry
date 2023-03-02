@@ -1,5 +1,5 @@
 import style from "./SearchBar.module.css"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { getDogsByName } from "../../Redux/actions"
 import  useLocalStorage  from "../../useLocalStorage"

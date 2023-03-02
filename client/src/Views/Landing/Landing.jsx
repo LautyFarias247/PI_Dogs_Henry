@@ -7,7 +7,7 @@ const Landing = () => {
             <div className={style.image}> 
             </div>
             <div className={style.landing}>
-                <p>Welcome to <b>The Dog Club</b></p> 
+                <p>Welcome to <b>Wikidogs</b></p> 
                 <Link to="home"><button>Start</button></Link>
             </div>
         </div>
