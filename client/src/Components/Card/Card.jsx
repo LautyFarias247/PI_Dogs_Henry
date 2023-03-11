@@ -11,6 +11,7 @@ const Card = (props) => {
                 <img src={props.image} alt={props.name}/>
             </Link> 
                 <p className={style.weight}>Weight: {props.weight} kg.</p>
+                <p className={style.weight}>Lifespan: {props.lifespan}</p>
             </div>
              <div className={style.temperament}>
                 <span>{props.temperament}</span>

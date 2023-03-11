@@ -13,6 +13,7 @@ const CardsContainer = ({slicedDogs}) => {
                     weight={dog.weight}
                     id={dog.id}
                     key={dog.id }
+                    lifespan = {dog.lifespan}
                 />  
             })}
         </div>

@@ -5,7 +5,7 @@ const dogsRouter = Router();
 
 dogsRouter.get('/', getDogsHandler);
 
-dogsRouter.get('/:idRaza', getDogByIdHandler )
+dogsRouter.get('/:idRaza', getDogByIdHandler );
 
 dogsRouter.post('/', createDogHandler);
 
